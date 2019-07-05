@@ -2,11 +2,12 @@ import AddCity from './AddCity';
 import Cities from './Cities';
 import City from './City';
 
-import colors from './theme';
+import { colors } from './theme';
 
 import {
   createStackNavigator,
-  createBottomTabNavigator
+  createBottomTabNavigator,
+  createAppContainer
 } from 'react-navigation';
 
 const CitiesNav = createStackNavigator({
@@ -14,6 +15,7 @@ const CitiesNav = createStackNavigator({
   City: { screen: City }
 }, {
   navigationOptions: {
+    title: 'Cities',
     headerStyle: {
       backgroundColor: colors.primary
     },
@@ -21,9 +23,11 @@ const CitiesNav = createStackNavigator({
   }
 });
 
-const Tabs = createBottomTabNavigator({
+const TabsNav = createBottomTabNavigator({
   Cities: { screen: CitiesNav },
   AddCity: { screen: AddCity }
 });
 
-export default Tabs;
+const AppContainer = createAppContainer(TabsNav);
+
+export default AppContainer;
