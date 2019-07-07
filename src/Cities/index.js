@@ -21,7 +21,7 @@ function Cities({ screenProps, navigation }) {
       <View>
         {
           screenProps.cities.map((city, index) => (
-            <View>
+            <View key={index}>
               <TouchableWithoutFeedback
                 onPress={() => viewCity(city)}
               >

@@ -10,11 +10,20 @@ function App() {
     }
   }
 
+  const addLocation = (cityId, location) => {
+    const currentCity = cities.find(city => city.id === cityId);
+
+    currentCity.locations.push(location);
+
+    setCities([...cities]);
+  }
+
   return (
     <AppContainer
       screenProps={{
         cities,
-        addCity
+        addCity,
+        addLocation
       }}
     />
   );
