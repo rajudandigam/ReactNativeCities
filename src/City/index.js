@@ -73,6 +73,17 @@ function City({ navigation, screenProps }) {
 }
 
 const styles = StyleSheet.create({
+  locationContainer: {
+    padding: 10,
+    borderBottomColor: colors.primary,
+    borderBottomWidth: 2
+  },
+  name: {
+    fontSize: 20
+  },
+  info: {
+    color: 'rgba(0,0,0,0.5)'
+  },
   input: {
     position: 'absolute',
     height: 50,
