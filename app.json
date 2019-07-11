@@ -23,9 +23,12 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "description": "",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.dand.cities"
     },
-    "description": ""
+    "android": {
+      "package": "com.dand.cities"
+    }
   }
 }
